@@ -74,7 +74,7 @@ int main()
     char filter_exp[] = "tcp port 80";
     bpf_u_int32 net;
 
-    handle = pcap_open_live("ens33", BUFSIZ, 1, 1000, errbuf);
+    handle = pcap_open_live("eth0", BUFSIZ, 1, 1000, errbuf);
     if (handle == NULL) {
         fprintf(stderr, "Couldn't open device: %s\n", errbuf);
         return 2;
