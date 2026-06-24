@@ -38,7 +38,6 @@ void got_packet(u_char *args, const struct pcap_pkthdr *header, const u_char *pa
                    eth->ether_dhost[0], eth->ether_dhost[1], eth->ether_dhost[2],
                    eth->ether_dhost[3], eth->ether_dhost[4], eth->ether_dhost[5]);
 
-            // [IP] IP 주소 출력
             printf("[IP Header]\n");
             printf("  Src IP : %s\n", inet_ntoa(ip->iph_sourceip));   
             printf("  Dst IP : %s\n", inet_ntoa(ip->iph_destip));    
